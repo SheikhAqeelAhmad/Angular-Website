@@ -1,0 +1,30 @@
+<div class="my-5">
+    <h1 class="text-center">Contact us</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-10 mx-auto">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="myformsubmit()">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email"
+                        formControlName="email">
+
+                    <!-- <span *ngIf="email.invalid" class="error">Email is Required</span> -->
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Phone</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter 11 digits phone number only"
+                        formControlName="phone">
+                </div>
+                <div class="form-check mb-5">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="terms">
+                    <label class="form-check-label" for="exampleCheck1">agree to the terms & policy</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
